@@ -79,7 +79,7 @@ public class Manager extends Phone implements IPhone {
             return;
         }
         for (Contact c : contactArrayList) {
-            if (c.getName().equalsIgnoreCase(contact.getName()) && c.getType().getIdType().equals(type.getIdType())) { //equalsIgnoreCase so sánh không phân biệt hoa thường
+            if (c.getName().equalsIgnoreCase(contact.getName()) && c.getType().getIdType().equals(type.getIdType())) {
                 System.out.println("Số điện thoại này đã tồn tại, bạn có muốn cập nhật lại số điện thoại? (Y/N)");
                 String choice = new Scanner(System.in).nextLine();
                 if (choice.equalsIgnoreCase("Y")) {
