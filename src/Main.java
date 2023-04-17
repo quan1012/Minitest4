@@ -76,7 +76,7 @@ public class Main {
                             + "6.Thêm số điện thoại.\n"
                             + "0.Exit");
             System.out.println();
-            System.out.println("Vui lòng chọn chức năng:");
+            System.out.println("Chọn chức năng:");
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
@@ -98,7 +98,7 @@ public class Main {
                     insert();
                     break;
                 default:
-                    System.out.println("Mời chọn lại chức năng!!!");
+                    System.out.println("Chọn lại chức năng!!!");
             }
         } while (choice != 0);
     }

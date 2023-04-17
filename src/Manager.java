@@ -67,7 +67,7 @@ public class Manager extends Phone implements IPhone {
         }
         for (Contact c : contactArrayList) {
             if (c.getName().equalsIgnoreCase(contact.getName()) && c.getType().getIdType().equals(type.getIdType())) {
-                System.out.println("Số điện thoại này đã tồn tại, bạn có muốn cập nhật lại số điện thoại? (Y/N)");
+                System.out.println("Số điện thoại này đã có, bạn có muốn cập nhật lại số điện thoại? (Y/N)");
                 String choice = new Scanner(System.in).nextLine();
                 if (choice.equalsIgnoreCase("Y")) {
                     c.setNumberPhone(contact.getNumberPhone());
