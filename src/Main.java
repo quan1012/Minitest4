@@ -1,62 +1,63 @@
 
 import java.util.*;
+
 public class Main {
-     public static List<Contact> contacts = new ArrayList<>();
+    public static List<Contact> contacts = new ArrayList<>();
     public static Manager phoneBookManage = new Manager(contacts);
 
 
-    public static void  search(){
+    public static void search() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Mời bạn nhập tên cần tìm kiếm:");
         String name = sc.nextLine();
-        phoneBookManage. searchPhone(name);
+        phoneBookManage.searchPhone(name);
 
     }
 
-    public static void sort(){
+    public static void sort() {
         phoneBookManage.sort();
     }
 
-    public static void display(){
+    public static void display() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập ID:");
-        String id=sc.nextLine();
+        String id = sc.nextLine();
         System.out.println("Nhập tên công ty:");
-        String name=sc.nextLine();
-        Type type=new Type(id,name);
+        String name = sc.nextLine();
+        Type type = new Type(id, name);
         phoneBookManage.display(type);
     }
 
-    public static void delete(){
+    public static void delete() {
         System.out.println("Nhập tên cần xóa:");
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         String name = sc.nextLine();
         phoneBookManage.removePhone(name);
     }
 
-    public static void editPhone(){
-        Scanner sc =new Scanner(System.in);
+    public static void editPhone() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên:");
         String name = sc.nextLine();
         System.out.println("Nhập số điện thoại:");
-        String newPhone=sc.nextLine();
-        phoneBookManage.updatePhone(name,newPhone);
+        String newPhone = sc.nextLine();
+        phoneBookManage.updatePhone(name, newPhone);
     }
 
-    public static void insert(){
-        Scanner sc=new Scanner(System.in);
+    public static void insert() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên:");
         String name = sc.nextLine();
         System.out.println("Nhập số điện thoại:");
-        String phoneNumber= sc.nextLine();
+        String phoneNumber = sc.nextLine();
         System.out.println("Nhập type:");
         System.out.println("Nhập ID:");
-        String id=sc.nextLine();
+        String id = sc.nextLine();
         System.out.println("Nhập tên công ty:");
-        String n_ame=sc.nextLine();
-        Type type=new Type(id,n_ame);
+        String n_ame = sc.nextLine();
+        Type type = new Type(id, n_ame);
 
-        Contact contact=new Contact(name,phoneNumber,type);
+        Contact contact = new Contact(name, phoneNumber, type);
 
         phoneBookManage.insertPhone(contact);
     }
@@ -99,6 +100,6 @@ public class Main {
                 default:
                     System.out.println("Mời chọn lại chức năng!!!");
             }
-        }while (choice !=0);
+        } while (choice != 0);
     }
 }

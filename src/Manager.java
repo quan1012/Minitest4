@@ -1,25 +1,12 @@
-import java.io.IOException;
 import java.util.*;
 
 public class Manager extends Phone implements IPhone {
     private ArrayList<Contact> contactArrayList;
     private ArrayList<Type> typeArrayList;
 
-    public Manager(List<Contact> contacts) {
+    public Manager(List<Contact> contactList) {
         contactArrayList = new ArrayList<>();
         typeArrayList = new ArrayList<>();
-    }
-
-    public void saveToFile(String filename) throws IOException {
-        ReadWriteFile<Contact> writeFile = new ReadWriteFile<>();
-        writeFile.writeToFile(filename, contactArrayList);
-        System.out.println("Đã lưu vào danh bạ " + filename);
-    }
-
-    public void loadFromFile(String filename) throws IOException, ClassNotFoundException {
-        ReadWriteFile<Contact> readFile = new ReadWriteFile<>();
-        contactArrayList = readFile.readFromFile(filename);
-        System.out.println("Đọc từ file " + filename);
     }
 
     public void addType(Type type) {
