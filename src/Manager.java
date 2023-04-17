@@ -4,7 +4,7 @@ public class Manager extends Phone implements IPhone {
     private ArrayList<Contact> contactArrayList;
     private ArrayList<Type> typeArrayList;
 
-    public Manager(List<Contact> contactList) {
+    public Manager(List<Contact> contacts) {
         contactArrayList = new ArrayList<>();
         typeArrayList = new ArrayList<>();
     }
